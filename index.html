@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade js </title>
+    <link rel="stylesheet" type="text/css" href="_css/style.css">
+</head>
+
+<body>
+
+    <h1>SuperAçaiajin - Sua loja de açai favorita</h1>
+    <table>
+        <tr>
+            <th>Tamanho P</th>
+            <th>Tamanho M</th>
+            <th>Tamanho G </th>
+        </tr>
+        <tr>
+            <td>R$10,00</td>
+            <td>R$15,00</td>
+            <td>R$20,00</td>
+        </tr>
+
+    </table>
+    <button id="pedido">Escolha o tamanho</button>
+    <button id="pag" onclick="pag()">Pagamento</button>
+    <script>
+        let nota;
+        let preco;
+        function pedir() {
+            nota = prompt('Qual tamanho do açaí deseja?');
+
+            switch (nota) {
+                case 'p':
+                    alert("O tamanho escolhido foi P - valor de R$10,00.");
+                    preco = 10.00;
+                    break;
+                case 'm':
+                    alert("O tamanho escolhido foi M - valor de R$15,00.");
+                    preco = 15.00;
+                    break;
+                case 'g':
+                    alert("O tamanho escolhido foi G - valor de R$20,00.");
+                    preco = 20.00;
+                    break;
+                default:
+                    alert("Tamanho não escolhido");
+            }
+        }
+        function pag() {
+            let forma = prompt('Qual a forma de pagamento');
+            if (forma == 'dinheiro') {
+                let quan = parseInt(prompt("Digite quanto você pagará"));
+                let conta = quan - preco;
+                if (conta < 0) {
+                    alert("Você terá que mudar o valor pois esta faltando uma quantia de: " + conta);
+                }
+                if (quan > preco) {
+                    alert("O seu troco será de: " + conta)
+                }
+            }
+            if (forma == 'cartão' || forma == 'Cartão') {
+                let contaCar = preco + 0.05;
+                alert("O valor a ser pago e de: " + contaCar);
+            }
+        }
+       
+
+
+        document.getElementById('pedido').addEventListener('click', function () {
+            pedir();
+        });
+        document.getElementById('Pagamento').addEventListener('click', function () {
+            pag();
+        });
+
+    </script>
+    
+</body>
+
+</html>

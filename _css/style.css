@@ -1,0 +1,48 @@
+body {
+    background-color: bisque;
+    background-image: url(../_imagem/Dragon-Ball-Goku-Free-PNG-HQ-Image.png), url(../_imagem/unnamed.png);
+    background-repeat: no-repeat;
+    background-position: right, left;
+    background-attachment: fixed;
+    background-size: 20%;
+
+
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    background-color: rgb(200, 153, 244);
+}
+
+table {
+    width: 100%;
+    height: 90px;
+    border: 5px solid rgb(110, 67, 208);
+}
+
+tr,
+th,
+td {
+    height: 100%;
+    list-style-type: unset;
+    text-align: center;
+    border: 4px solid rgb(246, 245, 216);
+    background-color: rgb(216, 214, 214);
+
+}
+
+th {
+    background-color: rgb(138, 134, 134);
+    color: white;
+    background-color: rgba(153, 21, 187, 0.839);
+}
+
+button {
+    background: rgb(110, 67, 208);
+    border: 5px solid rgb(110, 67, 208);
+    text-align: right;
+    color: rgb(255, 255, 255);
+
+}
+
